@@ -20,7 +20,6 @@ class App extends Component{
         // {noteId: 2, noteContent: 'Nota 2'}
       ]
     };
-    console.log(DB_CONFIG);
     this.app = firebase.initializeApp(DB_CONFIG);
     this.db = this.app.database().ref().child('notes');
 
