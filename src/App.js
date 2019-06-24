@@ -2,6 +2,8 @@ import React, {Component}from 'react';
 import logo from './logo.svg';
 import './App.css';
 import firebase from 'firebase';
+
+
 import {DB_CONFIG} from './config/config'
 
 import Note from './components/Notes'
@@ -18,6 +20,7 @@ class App extends Component{
         // {noteId: 2, noteContent: 'Nota 2'}
       ]
     };
+    console.log(DB_CONFIG);
     this.app = firebase.initializeApp(DB_CONFIG);
     this.db = this.app.database().ref().child('notes');
 
@@ -37,7 +40,7 @@ class App extends Component{
     this.db.on('child_removed',snap => {
       for(let i = 0; i < notes.length; i++)
       {
-        if(notes[i].noteId == snap.key){
+        if(notes[i].noteId === snap.key){
           notes.splice(i,1);
         }
       }

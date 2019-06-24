@@ -1,9 +1,13 @@
+import {config} from 'dotenv';
+
+config();
+
 export const DB_CONFIG = {
-    apiKey: "AIzaSyCGtodXKNudCgFABYlrwnQoSuIZx0ZXrAc",
-    authDomain: "notereact-82992.firebaseapp.com",
-    databaseURL: "https://notereact-82992.firebaseio.com",
-    projectId: "notereact-82992",
+    apiKey: process.env.REACT_APP_APIKEY,
+    authDomain: process.env.REACT_APP_AUTHDOMAIN,
+    databaseURL: process.env.REACT_APP_DATABASEURL,
+    projectId: process.env.REACT_APP_PROJECTID,
     storageBucket: "",
-    messagingSenderId: "141607065240",
-    appId: "1:141607065240:web:6644fe188b8f4bde"
+    messagingSenderId: process.env.REACT_APP_MSSID,
+    appId: process.env.REACT_APP_APPID
 };
