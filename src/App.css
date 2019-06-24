@@ -31,3 +31,37 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background: #686c88;
+  background: -webkit-linear-gradient(to right,#3f4c8b,#606c88);
+  background: linear-gradient(to right,#3f4c6b,#606c88);
+  color: #fff;
+  text-align: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.notesHeader, .notesBody, .notesFooter{
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px;
+  margin: 0;
+}
+
+.notesHeader{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.notesBody{
+  margin-top: 20px;
+}
+
+.notesFooter{
+  bottom: 0;
+  position:  fixed;
+  left: 0;
+  width: 100%;
+}
